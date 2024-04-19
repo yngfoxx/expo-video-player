@@ -149,7 +149,7 @@ const VideoPlayer = (tempProps: Props) => {
             ? PlaybackStates.Ended
             : status.isBuffering
             ? PlaybackStates.Buffering
-            : status.shouldPlay
+            : status.isPlaying || status.shouldPlay
             ? PlaybackStates.Playing
             : PlaybackStates.Paused,
       })
